@@ -1,0 +1,41 @@
+{
+  "name": "pluggable-plugin-builder",
+  "version": "1.0.0",
+  "description": "Custom webpack builders for Angular build facade. Allow to build a single umd bundle for the Angular project",
+  "main": "dist/index.js",
+  "builders": "builders.json",
+  "author": "Vineet Pratap",
+  "peerDependencies": {
+    "@angular-devkit/build-angular": ">=0.800.0",
+    "cosmiconfig": "^5.2.1"
+  },
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc && ts-node merge-schemes.ts",
+    "postbuild1": "npm test && npm run e2e",
+    "test": "jest --config jest-ut.config.js",
+    "e2e": "jest --config jest-e2e.config.js",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@angular-devkit/build-angular": "^0.800.6",
+    "@angular/compiler": "^8.0.3",
+    "@angular/compiler-cli": "^8.0.3",
+    "@angular/core": "^8.0.3",
+    "@types/jest": "^24.0.15",
+    "@types/lodash": "^4.14.135",
+    "@types/node": "^12.0.10",
+    "@types/webpack": "^4.4.34",
+    "@types/webpack-dev-server": "^3.1.6",
+    "@types/webpack-merge": "^4.1.5",
+    "jest": "^24.8.0",
+    "lodash": "^4.17.11",
+    "rimraf": "2.6.3",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "~3.4.5"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}

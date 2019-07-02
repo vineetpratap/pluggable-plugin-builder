@@ -1,0 +1,12 @@
+{
+    "properties": {
+      "webpackExternalDependencies": {
+        "type": "object",
+        "description": "Webpack Externals Dependencies",
+        "properties": {
+          "path": {"type": "string", "description": "Path to the custom webpack configuration file"}
+        },
+        "default": false
+      }
+    }
+  }

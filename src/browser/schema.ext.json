@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "modulePath": {
+      "type": "string",
+      "description": "Path to module like loadChildren",
+      "default": ""
+    },
+    "pluginName": {
+      "type": "string",
+      "description": "Name of bundled plugin",
+      "default": ""
+    },
+    "sharedLibs": {
+      "type": "string",
+      "description": "A comma-delimited list of shared lib names used by current plugin",
+      "default": ""
+    }
+  }
+}

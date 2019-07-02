@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  pluggable-plugin-builder:
+#    image: pluggable-plugin-builder
+    container_name: plugin.builder
+    build: .
+#    environment:
+#      NODE_ENV: production
+    volumes:
+      - $PWD:/usr/src/app
+    command: npm run build
+#    ports:
+#      - 3000:3000
