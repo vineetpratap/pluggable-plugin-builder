@@ -13,10 +13,10 @@ export const customWebpackConfigTransformFactory: (
   { workspaceRoot }
 ) => browserWebpackConfig => {
   return CustomWebpackBuilder.buildWebpackConfig(
-    normalize(workspaceRoot),
+    normalize( workspaceRoot ),
     options.webpackExternalDependencies,
     browserWebpackConfig,
-    options //TODO: pass Target options as well (configuration option in particular)
+    options
   );
 };
 
@@ -24,7 +24,7 @@ export const getTransforms = (
   options: CustomWebpackSchema,
   context: BuilderContext
 ) => ({
-  webpackConfiguration: customWebpackConfigTransformFactory(options, context)
+  webpackConfiguration: customWebpackConfigTransformFactory( options, context )
 });
 
 

@@ -4,7 +4,11 @@
   "description": "Custom webpack builders for Angular build facade. Allow to build a single umd bundle for the Angular project",
   "main": "dist/index.js",
   "builders": "builders.json",
-  "author": "Vineet Pratap",
+  "author": "Vineet Pratap <vineet.pratap@ymail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vineetpratap/pluggable-plugin-builder.git"
+  },
   "peerDependencies": {
     "@angular-devkit/build-angular": ">=0.800.0",
     "cosmiconfig": "^5.2.1"
